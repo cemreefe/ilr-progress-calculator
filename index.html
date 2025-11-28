@@ -139,6 +139,15 @@
             transform: translateX(-50%) translateY(0);
         }
         
+        /* References tooltip with delayed hide */
+        .refs-tooltip {
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+            transition-delay: 0.2s; /* Delay before hiding */
+        }
+        .group:hover .refs-tooltip {
+            transition-delay: 0s; /* No delay when showing */
+        }
+        
         hr {
             border-color: #e7e5e4;
         }
@@ -471,6 +480,57 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- References Section -->
+                <div class="relative text-center py-2">
+                    <span class="group inline-block">
+                        <button class="text-[10px] text-stone-400 hover:text-teal-600 transition-colors cursor-pointer pb-2">
+                            📄 View source references from Command Paper CP 1448
+                        </button>
+                        <div class="refs-tooltip invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-full left-0 right-0 -mt-2 pt-2 z-50">
+                            <div class="bg-stone-900 text-stone-200 rounded-xl p-5 shadow-2xl border border-stone-700 text-xs max-h-80 overflow-y-auto text-left">
+                        <h4 class="font-bold text-teal-300 mb-3 text-sm">Source: "A Fairer Pathway to Settlement" (CP 1448, Nov 2025)</h4>
+                        <ul class="space-y-2.5 text-stone-300">
+                            <li class="flex gap-2">
+                                <span class="text-teal-400 font-mono text-[10px] shrink-0">p.20-21</span>
+                                <span><strong class="text-stone-100">10-year baseline:</strong> "The baseline qualifying period for settlement for most migrants is increased from 5 years to 10 years."</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-teal-400 font-mono text-[10px] shrink-0">p.21-22</span>
+                                <span><strong class="text-stone-100">Table 2 - Reductions:</strong> High Earner (£50,270+ for 3 years): -5 years; Max Earner (£125,140+ for 3 years): -7 years; C1 English: -1 year; Volunteering: -3 to -5 years</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-teal-400 font-mono text-[10px] shrink-0">p.22</span>
+                                <span><strong class="text-stone-100">Table 3 - Penalties:</strong> Public funds &lt;12 months: +5 years; Public funds ≥12 months: +10 years; Serious breach: +20 years</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-teal-400 font-mono text-[10px] shrink-0">p.21</span>
+                                <span><strong class="text-stone-100">Single adjustment rule:</strong> "Only one of the listed considerations (i.e. the one that causes the largest reduction/increase) would be applied."</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-teal-400 font-mono text-[10px] shrink-0">p.21</span>
+                                <span><strong class="text-stone-100">English requirement:</strong> "The applicant must be able to evidence that they meet English language requirements, which will be at B2 level."</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-teal-400 font-mono text-[10px] shrink-0">p.20</span>
+                                <span><strong class="text-stone-100">Fixed routes:</strong> Family (5 years), BN(O) (5 years), Global Talent/Innovator (3 years) retain fixed timelines.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-teal-400 font-mono text-[10px] shrink-0">p.20</span>
+                                <span><strong class="text-stone-100">Refugees:</strong> 20-year baseline for core protection route.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-teal-400 font-mono text-[10px] shrink-0">p.20</span>
+                                <span><strong class="text-stone-100">Sub-RQF6 workers:</strong> 15-year baseline for roles below bachelor's degree level.</span>
+                            </li>
+                        </ul>
+                        <p class="mt-4 pt-3 border-t border-stone-700 text-stone-500 text-[10px]">
+                            Full document: <a href="https://www.gov.uk/government/consultations/earned-settlement" target="_blank" class="text-teal-400 hover:text-teal-300 underline">gov.uk/government/consultations/earned-settlement</a>
+                        </p>
+                            </div>
+                        </div>
+                    </span>
+                </div>
 
                 <!-- Adjustments Breakdown -->
                 <div id="adjustments-grid" class="grid sm:grid-cols-2 gap-4">
@@ -570,6 +630,7 @@
                         Looking for the old 5-year ILR tracker? <a href="https://cemrekarakas.com/misc/web/ilr-progress" target="_blank" class="text-teal-600 hover:text-teal-700 underline underline-offset-2">Check it out here</a>
                     </p>
                 </div>
+                
             </div>
         </div>
     </div>
